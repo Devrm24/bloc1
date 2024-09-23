@@ -110,4 +110,4 @@ Un slug est une version simplifiée et lisible d'une URL, généralement utilis�
 En `HTTP`, la négociation de contenu est le mécanisme utilisé pour servir différentes représentations d'une ressource à partir du même URI, 
 pour aider l'agent utilisateur à indiquer la représentation la plus adaptée à l'utilisatrice ou à l'utilisateur par exemple : la langue du document, le format d'image ou l'encodage à utiliser pour le contenu).
 
-<img src="https://developer.mozilla.org/fr/docs/Web/HTTP/Content_negotiation/httpnego.png" alt="NEGOCIATION CONTENUE SCHEMA" width="450" height="300"> _⬅️schéma représentant la négociation de contenu_
+<img src="https://developer.mozilla.org/fr/docs/Web/HTTP/Content_negotiation/httpnego.png" alt="NEGOCIATION CONTENUE SCHEMA" width="450" height="300"> _schéma la négociation de contenu_
