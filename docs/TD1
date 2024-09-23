@@ -108,7 +108,7 @@ Les codes de statut HTTP se décomposent en 5 grandes familles :
 
 * Un code 5xx (500, 501, 502, 503) indique une erreur côté serveur.
 
-## Question 7
+##Question 7
 
 La négociation de contenu en HTTP est un processus par lequel un serveur web détermine la meilleure représentation d'une ressource à renvoyer en fonction des préférences exprimées par le client (navigateur web). Ce mécanisme permet de répondre aux divers besoins et capacités des clients, comme la langue, le format ou l'encodage des données.
 
