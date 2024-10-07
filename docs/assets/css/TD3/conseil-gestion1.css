@@ -1,75 +1,52 @@
 body{
-    background-color: rgb(201, 201, 201);
-    font-family: "Inria Sans", Verdana, sans-serif;
-
+    background-image: url(../TD3/df-min.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
-
-
-.container1 {
-    border: solid 3px rgb(255, 89, 0);
-    border-radius: 15px;
-    padding: 10px; 
-    display: inline-block; 
-    background-color: rgb(255, 89, 0);
-    color: white;
-    width: 450px;
-}
-
-
-span{
-    text-decoration: underline;
-}
-
-#freepik{
-    color: rgb(255, 149, 0);
-}
-
-.block-titre{
-    text-align: center;
-    padding-top: 50px;
-    position: relative;
-    top: 50px;
-}
-
-h2{
-    font-size: 20px;
-}
-
-.image img {
-    width: 100%; 
-}
-
-.container2 {
-    padding: 20px;
+.container{
     display: flex;
-    width: 70%;
-  }
-
-  .container2 > * {
-    padding: 10px;
-    border: 2px solid rgb(255, 255, 255);
-    border-radius: 0.5em;
-    margin: 0 10px;
-    flex: 1;
-    background-color: white;
+    justify-content: space-around;
 }
 
-  i {
-    font-size: 50px;
-    background-color: rgb(255, 149, 0);
-    border-radius: 50%; 
-    display: inline-block; 
-    padding: 20px; 
-}
-
-p{
-    padding-bottom: 30px;
-}
-
-footer {
+#b1{
+    background-color: orangered;
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     text-align: center;
-    background-color: rgb(49, 49, 49);
-    margin-top: 30px;
-    padding: 20px 0; 
+    border-radius: 10px;
+    margin-top: 2.5%;
+    padding: 30px;
+    width: 500px;
+
+}
+.bot{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 200px;
+}
+i{
+    color: #e36e44;
+    font-size: 50px;
+}
+.bot1, .bot2, .bot3, .bot4{
+    background-color: #f5f5f5;
+    width: 200px;
+    height: 250px;
+    border-radius: 10%;
+    padding: 30px;
+    box-shadow: 5px 5px 5px orange;
+}
+footer{
+    background-color: black;
+    text-align: center;
+    color: thistle;
+}
+a{
     color: white;
 }
