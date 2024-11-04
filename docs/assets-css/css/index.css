@@ -18,3 +18,8 @@ footer {
     margin-top: 90px;
     margin-left: 10px;
 }
+
+li {
+     font-weight: 700;
+     color: black;
+    }
