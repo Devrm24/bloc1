@@ -1,66 +1,52 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <title>Exercice</title>
-  <link rel="stylesheet" href="../../assets-css/css/TD4/exercice.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 1 du TD4 </title>
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="../../js-td4/exercice.js"></script>
 </head>
-<body>
-    <button id="btgreen">GREEN</button>
-    <button id="btblue">BLUE</button>
-    <button id="btyellow">YELLOW</button>
-    <button id="btred">RED</button>
-    <button id="btreset">RESET</button>
+    <body onload=showDate();>   
+        <p><b>Cliquez sur le bouton pour changer la couleur du background.</b></p> 
+        <button onclick = "changeColor('blue');">Bleu</button>
+        <button onclick = "changeColor('green');">Vert</button> 
+        <button onclick = "changeColor('red');">Rouge</button>
+        <button onclick = "changeColor('yellow');">Jaune</button>
 
-    <input type="text" id="text">
-    <button id="btajout">Ajouter un élément</button>
-    <ul id="list"></ul>
+        <p><b>Cliquez sur le bouton pour changer la couleur du background.</b></p>
+        <input type="text" id="inputElement" placeholder="saisissez un élement">
+        <button id="ajouterBtn">Ajouter</button>
+        <ul id="liste"></ul>
 
-    <input type="text" id="nb1">
-    +
-    <input type="text" id="nb2">
-    <button id="addition">calculer la somme</button>
-    =
-    <input type="text" id="somme">
-	<br>
-	<br>
-    <select name="voitures" id="menu_deroulant">
-        <option value="">--Choisir une image--</option>
-        <option value="f40">F40</option>
-        <option value="gt3rs">GT3RS</option>
-        <option value="jesko">Jesko</option>
-    </select>
-	<br>
-	<br>
-    <div id="image-container">
-        <img id="car-image" src="" alt="Car Image" style="display:none; width:500px; height:auto;">
-    </div>
-    <br><br>
-    <div class="alerte">Alerte au passage de la souris</div>
-    <br>
-    <div id="clock"></div>
-    <br>
-    <div id="elementASupprimer">Ceci est l'élément que vous pouvez supprimer.</div>
-    <button id="deleteButton">Supprimer l'élément</button>
-    <br><br>
-    <label for="toggleCheckbox">Afficher l'élément</label>
-    <input type="checkbox" id="toggleCheckbox">
-    <br><br>
-    <div id="elementACacher">Ceci est l'élément que vous pouvez afficher ou cacher.</div>
-    <br><br>
-    <h2>Formulaire de Contact</h2>
-    <form id="contactForm">
-        <label for="name" id="label-name">Nom :</label>
-        <input type="text" id="name" name="name" required><br><br>
+        <p><b>Cliquez sur le bouton pour calculer la somme des deux nombres.</b></p>
+        <input id="nbr1"> + <input id="nbr2">
+      <button onclick="somme()">Calculer la somme</button>
+      = <input id="sum"><br /><br />
 
-        <label for="email" id="label-email">Email :</label>
-        <input type="email" id="email" name="email" required><br><br>
+      <select name="jeux" id="jeux" onChange="changeit(this.value)">
+        <option value="hidden">Call of Duty Black Ops 6</option>
+        <option value="hidden2">Minecraft</option>
+        <option value="hidden3">DYING LIGHT2</option>
+      </select><br /><br />
+       
+       
+      <img id="hidden" src="../../assets-css/images/TD4/BO6.jfif" style="display: none;"/>
+      <img id="hidden2" src="../../assets-css/images/TD4/Minecraft.jfif" style="display: none;"/>
+      <img id="hidden3" src="../../assets-css/images/TD4/DL2.jpg" style="display: none;"/>
+    </body>
 
-        <label for="message" id="label-message">Message :</label>
-        <textarea id="message" name="message" rows="4" required></textarea><br><br>
+    <p><b>Survoler pour afficher une alerte.</b></p>
+    <p id="survolElement">Passez la souris ici pour afficher une alerte !</p>
 
-        <button type="submit" id="send-button">Envoyer</button>
+    <span id='horloge' style="background-color:#1C1C1C;color:silver;font-size:40px;"></span>
+
+    <br /><br />
+
+    <form action='JS-Confirm.html' name='formulaire'>
+    Votre age     <input type='text'   name='age'>
+    <input type='button' value='Confirmer' onClick='ConfirmerAge()'>
     </form>
-</body>
-<script src="../../js-td4/exercice.js"></script>
+
 </html>

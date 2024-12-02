@@ -1,34 +1,69 @@
-const touches = [...document.querySelectorAll('.bouton')];
-const listeKeycode = touches.map(touche => touche.dataset.key);
-const ecran = document.querySelector('.ecran');
+let currentInput = '';
+let operator = '';
+let previousInput = '';
 
-document.addEventListener('keydown', (e) =>{
-    const valeur = e.KeyboardEvent.code;
-})
+function appendNumber(number) {
+    currentInput += number;
+    updateDisplay();
+}
 
-document.addEventListener('click', (e) => {
-    const valeur = e.target.dataset.key;
-    calculer(valeur)
-})
+function setOperator(op) {
+    if (currentInput === '') return;
+    operator = op;
+    previousInput = currentInput;
+    currentInput = '';
+}
 
-const calculer = (valeur) => {
-    if(listeKeycode.includes(valeur)){
-        switch(valeur){
-            case '8':
-                ecran.textContent = "";
-                break;
-            case '13':
-                const calcul = eval(ecran.textContent);
-                ecran.textContent = calcul;
-                break;
-            default:
-                const indexKeycode = listeKeycode.indexOf(valeur);
-                const touche = touches[indexKeycode];
-                ecran.textContent += touche.innerHTML;
-        }
+function calculate() {
+    if (currentInput === '' || previousInput === '' || operator === '') return;
+    let result;
+    const prev = parseFloat(previousInput);
+    const curr = parseFloat(currentInput);
+
+    switch (operator) {
+        case '+':
+            result = prev + curr;
+            break;
+        case '-':
+            result = prev - curr;
+            break;
+        case '*':
+            result = prev * curr;
+            break;
+        case '/':
+            result = prev / curr;
+            break;
+        default:
+            return;
+    }
+
+    currentInput = result.toString();
+    operator = '';
+    previousInput = '';
+    updateDisplay();
+}
+
+function clearDisplay() {
+    currentInput = '';
+    operator = '';
+    previousInput = '';
+    updateDisplay();
+}
+
+function updateDisplay() {
+    document.getElementById('display').value = currentInput;
+}
+
+function toggleSign() {
+    if (currentInput !== '') {
+        currentInput = (parseFloat(currentInput) * -1).toString();
+        updateDisplay();
     }
 }
 
-window.addEventListener('error', (e) => {
-    alert('Une erreur est survenue dans votre calcul :' + e.message)
-})
+function addDecimal() {
+    if (!currentInput.includes('.')) {
+        currentInput += '.';
+        updateDisplay();
+    }
+}
