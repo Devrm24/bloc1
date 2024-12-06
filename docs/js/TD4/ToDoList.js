@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const taskLabel = document.createElement('span');
         taskLabel.innerText = taskText;
-        taskLabel.contentEditable = true; // permet de modifier la tâche
+        taskLabel.contentEditable = true; // permet la modification de la tâche
         taskLabel.addEventListener('input', saveTaskList);
 
         const deleteBtn = document.createElement('button');
